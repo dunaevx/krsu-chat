@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2? Family= Nunito+Sans:opsz,wght@6..12,300 & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Noto+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: #ecf0f1;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans', sans-serif;
+}
+  .container12 {
+    display: flex;
+    align-items: normal;
+    min-height: 100vh;
+    height: 100vh;
+  }
+
+  
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .content-header {
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20%;
+    background: #212121;;
+    color:#ffffff;
+  }
+
+  .btn-signup{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    width: 85px;
+    -webkit-box-shadow: 0px 5px 26px 9px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 5px 26px 9px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 26px 9px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #212121;
+    cursor: pointer;
+  }
+
+  .btn-signup::after::before:active{
+    -webkit-box-shadow: 0px 5px 26px 9px rgba(0, 0, 0, 0.25) inset;
+    -moz-box-shadow: 0px 5px 26px 9px rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 0px 5px 26px 9px rgba(0, 0, 0, 0.25) inset;
+  }
+
+  .content-center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: -70px;
+  }
+/* .content-nicname{
+  color: #ff802b;
+  margin: 0px 0px 5px 0px;
+} */
+  .content-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url(/src/img/1000_F_589932782_vQAEAZhHnq1QCGu5ikwrYaQD0Mmurm0N.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .content-name {
+    flex: 1;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+  }
+
+  .content-status {
+    font-size: 14px;
+    color: #a0a0a0;
+  }
+
+  .content-icon {
+    margin-right: 10%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .content-body {
+    flex: 1;
+    padding: 15px 20%;
+    overflow-y: scroll;
+    background-position: center;
+    background-size:cover;
+    
+  }
+
+  .content-body_messengs{
+    height: 75vh;
+    overflow-y: auto;
+    padding-right: 5px;
+  }
+
+  .content-body::-webkit-scrollbar {
+    width: 12px;
+    background-color: #1c2833;
+    border-radius: 50px;
+    max-width: 100%;
+  }
+
+  .content-message {
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .content-bubble {
+    font-size: 16px;
+    border-radius: 10px;
+    color: #ffffff;
+    word-wrap: break-word;
+  }
+
+  .avatar-profile:hover{
+    border:2px solid #000;
+  }
+
+  .sent {
+    padding: 15px 15px 15px 15px;
+    width: max-content;
+    margin-left: auto;
+    background-color: #5d2bd2;
+    border-radius:10px 10px 0px 10px;
+    max-width: 60%;
+    padding-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  input::placeholder {
+    font-size: 16px;
+  }
+  
+   .received {
+    margin-left: 5px;
+    padding: 15px 15px 20px 15px;
+    width: fit-content;
+    padding-right: 10px;
+    border-radius: 10px 10px 10px 0;
+    background-color: #212121;
+    max-width: 60%;
+    margin-bottom: 0;
+  }
+
+.content-body_messengs::-webkit-scrollbar {
+    background-color: #21212188;
+    border-radius: 20px; 
+    width: 5px;
+}
+
+.content-body_messengs::-webkit-scrollbar-thumb {
+    background-color: #7070706b;
+    width: 2px;
+}
+
+.section-message{
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+  .content-time {
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    position: absolute;
+    right: 5px;
+    bottom: 3px;
+    font-size: 12px;
+    color: #a0a0a0;
+  }
+
+  .content-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .content-input {
+    font-size: 16px;
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #212121;;
+    color: #fff;
+  }
+
+  .content-input::placeholder {
+    color: #a0a0a0;
+  }
+
+  .content-button {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background-color: #0084ff;
+    cursor: pointer;
+  }
+
+  .content-button-icon {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+  }
+
+ @media screen and (max-width: 450px) {
+  .content-body{
+    padding: 20px;
+  }
+
+  .content-header{
+    padding: 15px;
+  }
+ }
