@@ -17,38 +17,39 @@ function Signup() {
   const displayName = e.target[0].value;
   const email = e.target[1].value;
   const password = e.target[2].value;
+
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   
   const auth = getAuth();
 
   function getRandomColor() {
-    const colors = ['#FF5733', '#3366FF', '#33FF33', '#9933FF', '#FF3333', '#FFFF33', '#FF33FF', '#33FFFF', '#66FF33', '#FF3366'];
-    const randomIndex = Math.floor(Math.random() * colors.length);
-    return colors[randomIndex];
-  }
+  const colors = ['#FF5733', '#3366FF', '#33FF33', '#9933FF', '#FF3333', '#FFFF33', '#FF33FF', '#33FFFF', '#66FF33', '#FF3366'];
+  const randomIndex = Math.floor(Math.random() * colors.length);
+  return colors[randomIndex];
+}
 
-  const assignRandomColor = async (userId) => {
-    const randomColor = getRandomColor();
-    const userColorRef = doc(db, "user_colors", userId);
-    await setDoc(userColorRef, { color: randomColor });
-  };
+const assignRandomColor = async (userId) => {
+  const randomColor = getRandomColor();
+  const userColorRef = doc(db, "user_colors", userId);
+  await setDoc(userColorRef, { color: randomColor });
+};
 
-  await createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-      const userId = userCredential.user.uid;
-      assignRandomColor(userId);
-      console.log(user);
-      navigate('/chat');         
-    })
-    .catch((err) =>{
-      setErr(true);
-      console.log(err);
-    });
-
-  await updateProfile(auth.currentUser, {
-      displayName: displayName,
+await createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    const user = userCredential.user;
+    const userId = userCredential.user.uid;
+    assignRandomColor(userId);
+    console.log(user);
+    navigate('/chat');         
+  })
+  .catch((err) =>{
+    setErr(true);
+    console.log(err);
   });
-      
+
+await updateProfile(auth.currentUser, {
+    displayName: displayName,
+});
 }
 
   return (
